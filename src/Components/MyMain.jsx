@@ -1,14 +1,11 @@
 import { Container } from "react-bootstrap";
-
 import GalleryComponent1 from "./GalleryComponent1";
 import GalleryComponent2 from "./GalleryComponent2";
 import GalleryComponent3 from "./GalleryComponent3";
-import { FilmsGallery, TvShow } from "./TvShow";
-
+import { FilmsGallery } from "./TvShow";
 const MyMain = () => {
   return (
     <Container fluid>
-      <TvShow />
       <FilmsGallery>
         <GalleryComponent1 />
       </FilmsGallery>
@@ -21,5 +18,4 @@ const MyMain = () => {
     </Container>
   );
 };
-
 export default MyMain;

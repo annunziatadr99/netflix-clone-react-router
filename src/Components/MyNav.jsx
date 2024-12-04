@@ -19,7 +19,7 @@ const MyNav = () => (
           <Nav.Link as={Link} to="/" className="nav-link text-light">
             Home
           </Nav.Link>
-          <Nav.Link as={Link} to="/TvShow" className="nav-link text-light">
+          <Nav.Link as={Link} to="/tv-shows" className="nav-link text-light">
             TV Shows
           </Nav.Link>
           <Nav.Link as={Link} to="/movies" className="nav-link text-light">

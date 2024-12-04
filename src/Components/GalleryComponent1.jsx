@@ -1,7 +1,10 @@
 import { Component } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 class GalleryComponent1 extends Component {
   state = { lupinFilms: [] };
+
   getLupin = () => {
     fetch("http://www.omdbapi.com/?apikey=25cea59a&s=lupin")
       .then((resp) => {
@@ -19,9 +22,11 @@ class GalleryComponent1 extends Component {
         console.log("errore", error);
       });
   };
+
   componentDidMount() {
     this.getLupin();
   }
+
   render() {
     console.log("verifica risultato");
     return (
@@ -31,7 +36,9 @@ class GalleryComponent1 extends Component {
           {this.state.lupinFilms.map((film) => (
             <Col key={film.imdbID} className="d-flex align-items-stretch">
               <Card className="w-100">
-                <Card.Img src={film.Poster} className="img-fluid" />
+                <Link to={`/movie-details/${film.imdbID}`}>
+                  <Card.Img src={film.Poster} className="img-fluid" />
+                </Link>
               </Card>
             </Col>
           ))}
@@ -40,4 +47,5 @@ class GalleryComponent1 extends Component {
     );
   }
 }
+
 export default GalleryComponent1;

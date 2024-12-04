@@ -14,7 +14,7 @@ function App() {
         <MyNav />
         <Routes>
           <Route path="/" element={<MyMain />} />
-          <Route path="/Title" element={<TvShow />} />
+          <Route path="/tv-shows" element={<TvShow />} />
           <Route path="/movie-details/:movieId" element={<MovieDetails />} />
         </Routes>
         <MyFooter />
