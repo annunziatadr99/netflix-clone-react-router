@@ -2,7 +2,7 @@ import { Button, Col, Container, Dropdown, Row } from "react-bootstrap";
 import { List } from "react-bootstrap-icons";
 import { Grid } from "react-bootstrap-icons";
 
-const Title = () => (
+const TvShow = () => (
   <Container
     fluid
     className="d-flex justify-content-between align-items-center my-4 bg-dark"
@@ -43,4 +43,12 @@ const Title = () => (
     </Row>
   </Container>
 );
-export default Title;
+
+const FilmsGallery = ({ children }) => (
+  <Container className="mt-5">
+    <h2 className="text-light">Films</h2>
+    {children}
+  </Container>
+);
+
+export { TvShow, FilmsGallery };

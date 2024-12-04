@@ -2,7 +2,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 import { BellFill } from "react-bootstrap-icons";
 import { PersonFill } from "react-bootstrap-icons";
-
+import { Link } from "react-router-dom";
 const MyNav = () => (
   <Navbar expand="lg" variant="dark" className="bg-dark">
     <Container fluid>
@@ -16,19 +16,23 @@ const MyNav = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#home" className="nav-link text-light">
+          <Nav.Link as={Link} to="/" className="nav-link text-light">
             Home
           </Nav.Link>
-          <Nav.Link href="#TV Shows" className="nav-link text-light">
+          <Nav.Link as={Link} to="/TvShow" className="nav-link text-light">
             TV Shows
           </Nav.Link>
-          <Nav.Link href="#Movies" className="nav-link text-light">
+          <Nav.Link as={Link} to="/movies" className="nav-link text-light">
             Movies
           </Nav.Link>
-          <Nav.Link href="#Recently Added" className="nav-link text-light">
+          <Nav.Link
+            as={Link}
+            to="/recently-added"
+            className="nav-link text-light"
+          >
             Recently Added
           </Nav.Link>
-          <Nav.Link href="#My List" className="nav-link text-light">
+          <Nav.Link as={Link} to="/my-list" className="nav-link text-light">
             My List
           </Nav.Link>
         </Nav>
